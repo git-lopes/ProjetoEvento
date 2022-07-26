@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using ProEventos.API.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Adiciona Contexto
+builder.Services.AddDbContext<ProEventosContext> (
+    options => options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
 
 // Add services to the container.
 
