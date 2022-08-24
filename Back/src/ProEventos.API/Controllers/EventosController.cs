@@ -90,11 +90,11 @@ namespace ProEventos.API.Controllers
             }
         }   
         [HttpDelete("{id}")]  
-        public async Task<IActionResult> Delete(int id, Evento model) {
+        public async Task<IActionResult> Delete(int id) {
             try
             {
-                return await this._eventoService.DeleteEvento(id) ?
-                   Ok("Deletado"):
+                return await _eventoService.DeleteEvento(id) ?
+                   Ok("Deletado") :
                    BadRequest("Evento não deletado");
                 
             }

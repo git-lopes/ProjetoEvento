@@ -11,7 +11,7 @@ using ProEventos.Persistence.Contextos;
 namespace ProEventos.Persistence.Migrations
 {
     [DbContext(typeof(ProEventosContext))]
-    [Migration("20220823184514_initial")]
+    [Migration("20220823225914_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,7 +57,7 @@ namespace ProEventos.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DataFim")
+                    b.Property<DateTime?>("DataFim")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("DataInicio")

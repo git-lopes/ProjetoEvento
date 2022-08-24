@@ -55,7 +55,7 @@ namespace ProEventos.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DataFim")
+                    b.Property<DateTime?>("DataFim")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("DataInicio")
